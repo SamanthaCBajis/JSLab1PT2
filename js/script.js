@@ -14,7 +14,7 @@ function startGame() {                                   // Where startGame func
 
     }else{
 
-        alert("Okay. Maybe next time...")               // If the user says no to playing game (having trouble getting the prompt to stop entirely this is the closest I could get}
+        (prompt("Okay..maybe another time..", "Please press Enter twice to quit.")) // Somewhat quitting the game if the user doesn't want to play
     }
 }
 
