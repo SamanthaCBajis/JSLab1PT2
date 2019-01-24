@@ -11,8 +11,13 @@ function startGame() {                                   // Where startGame func
     if (prompt("Do you want to play?") === "yes")       // Prompts where the user would like to play the game and enter characters name
     {
         userName = prompt("Enter your characters name.")
+
+    }else{
+
+        alert("Okay. Maybe next time...")               // If the user says no to playing game (having trouble getting the prompt to stop entirely this is the closest I could get}
     }
 }
+
 
 startGame();                                            // Call startGame function
 
@@ -45,15 +50,15 @@ function startCombat() {                                 //Execute startCombat f
             console.log(`You beat the Almighty Grant. Congratulations ${userName} you win!`);
             break;                                                  // Where the game would end because the user has won
 
-        } else if (userHP <= 0) {                                    // If the users health points is less than or equal to 0 before 3 wins are met Almighty Grant wins
+        } if (userHP <= 0) {                                    // If the users health points is less than or equal to 0 before 3 wins are met Almighty Grant wins
             console.log("Game Over. Almighty Grant Wins.");
         }
     }
 }
 
-startCombat();                                   // Calling startCombat function
-function getDmg() {                              // Declare/itilialize the getDmg function
-    return Math.floor(Math.random() * 5 + 1);    // Uses Math.floor(Math.random) by...
-                                                 // Returning a random number lower than 1 (Math.random), then making than number into an integer (Math.floor)
-}                                                // Then returns a random integer 0 to 4, then from 1 to 5 which is what we want
+startCombat();                                  // Calling startCombat function
+function getDmg() {                             // Declare/itilialize the getDmg function
+    return Math.floor(Math.random() * 5 + 1);   // Uses Math.floor(Math.random) by...
+                                                // Returning a random number lower than 1 (Math.random), then making than number into an integer (Math.floor)
+}                                               // Then returns a random integer 0 to 4, then from 1 to 5 which is what we want
 
